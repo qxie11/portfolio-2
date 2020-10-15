@@ -1,0 +1,62 @@
+@import "../utils/vars.scss";
+
+.main_page {
+    padding-bottom: 150px;
+    min-height: 100vh;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: -1;
+        opacity: 0.5;
+    }
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+.wrapper {
+    margin-top: 26vh;
+
+    .name {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 10px solid #fff;
+
+        h1 {
+            font-size: 45px;
+            color: #fff;
+            line-height: 0.8;
+            text-align: center;
+            font-family: $ms;
+        }
+    }
+
+    .describe {
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        margin-top: 25px;
+        min-height: 28px;
+        font-family: $raleway;
+    }
+}
