@@ -5,6 +5,4 @@ const withVideos = require('next-videos')
 module.exports = withPlugins([
     [withImages],
     [withVideos],
-], {
-    distDir: 'build',
-});
+]);
