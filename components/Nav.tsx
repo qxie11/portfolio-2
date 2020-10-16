@@ -3,11 +3,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import styles from "../styles/components/nav.module.scss";
 
-type Props = {
-    children: React.ReactNode
-}
-
-const Nav: React.FC<Props> = ({ children }) => {
+const Nav: React.FC = ({ children }) => {
     const [isActive, setActive] = useState<boolean>(false);
 
     const closeNav = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -16,7 +12,7 @@ const Nav: React.FC<Props> = ({ children }) => {
     }
 
     useEffect(() => {
-        isActive && gsap.from('nav a', {
+        isActive && gsap.from(`.${styles.nav} a`, {
             opacity: 0,
             y: -100,
             duration: 1,

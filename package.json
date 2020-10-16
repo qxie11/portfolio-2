@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "9.5.2",
+    "next-compose-plugins": "^2.2.0",
     "next-images": "^1.6.0",
     "next-videos": "^1.4.0",
     "react": "16.13.1",

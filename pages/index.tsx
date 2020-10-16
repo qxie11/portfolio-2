@@ -3,7 +3,6 @@ import Typed from 'typed.js';
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import styles from '../styles/components/main-page.module.scss';
-import Logo from '../public/images/logo.png';
 
 const Index: React.FC = () => {
 
@@ -26,8 +25,7 @@ const Index: React.FC = () => {
       typeSpeed: 60,
       loop: true
     };
-
-    new Typed('.main-describe', options);
+    new Typed(`.${styles.describe}`, options);
   }, [])
 
   return (
@@ -38,13 +36,13 @@ const Index: React.FC = () => {
         </video>
         <div className="container">
           <Link href="/">
-            <img src={Logo} alt="logo" className={styles.logo} />
+            <img src={require('../public/images/logo.png')} alt="logo" className={styles.logo} />
           </Link>
           <div className={styles.wrapper}>
             <div className={styles.name}>
               <h1>Evgeniy Ponomarev</h1>
             </div>
-            <p className={`main-describe ${styles.describe}`}></p>
+            <p className={styles.describe}></p>
           </div>
         </div>
       </section>
