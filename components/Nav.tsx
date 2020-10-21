@@ -28,6 +28,7 @@ const Nav: React.FC = ({ children }) => {
                     <Link href="/about"><a>About</a></Link>
                     <Link href="/skills"><a>Skills</a></Link>
                     <Link href="/portfolio"><a>Portfolio</a></Link>
+                    <Link href="/blog"><a>blog</a></Link>
                     <Link href="/links"><a>Links</a></Link>
                 </nav>
             </div>

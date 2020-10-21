@@ -1,0 +1,181 @@
+@import "../utils/vars.scss";
+
+.about {
+    min-height: 100vh;
+    position: relative;
+}
+
+.text_wrap {
+    text-align: center;
+}
+
+.chapter {
+    text-transform: uppercase;
+    margin-top: -25px;
+    font-size: 35px;
+    text-align: center;
+    font-family: $ms;
+
+    &_addition {
+        position: relative;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        letter-spacing: 2.5px;
+        font-family: $raleway;
+        font-size: 13px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            right: 10%;
+            left: 10%;
+            height: 1.5px;
+            background: #000;
+        }
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-top: 80px;
+
+    .about_me,
+    .photo,
+    .info {
+        padding: 20px;
+    }
+
+    .about_me {
+        &_chapter {
+            text-align: center;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-family: $raleway;
+        }
+
+        .text1,
+        .text2 {
+            margin-top: 15px;
+            font-size: 16px;
+            font-family: $ms;
+        }
+
+        .text1 {
+            color: #ff7c7c;
+        }
+    }
+
+    .me {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: url("../../public/images/me.jpg");
+        background-size: cover;
+    }
+
+    .info {
+        &_chapter {
+            text-align: center;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-family: $raleway;
+        }
+
+        &_item {
+            margin-top: 10px;
+            line-height: 1.5;
+            font-family: $ms;
+            font-size: 17px;
+
+            span {
+                font-weight: bold;
+            }
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+.decoration {
+    position: absolute;
+    z-index: -100;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    opacity: 0.7;
+
+    &:nth-child(2) {
+        top: 15%;
+        right: 80%;
+        border-color: #07acff;
+    }
+
+    &:nth-child(3) {
+        top: 20%;
+        right: 10%;
+        border-color: #ff07fa;
+        border-radius: 0;
+    }
+
+    &:nth-child(4) {
+        top: 32%;
+        right: 60%;
+        border-color: #14ff18;
+    }
+
+    &:nth-child(5) {
+        top: 42%;
+        right: 30%;
+        border-color: #0008ff;
+        border-radius: 0;
+    }
+
+    &:nth-child(6) {
+        top: 52%;
+        right: 40%;
+        border-color: #ffff00;
+    }
+
+    &:nth-child(7) {
+        top: 62%;
+        right: 60%;
+        border-color: #00ffe1;
+        border-radius: 0;
+    }
+
+    &:nth-child(7) {
+        top: 72%;
+        right: 20%;
+        border-color: #ff1485;
+    }
+
+    &:nth-child(8) {
+        top: 65%;
+        right: 80%;
+        border-color: #4b367c;
+        border-radius: 0;
+    }
+
+    &:nth-child(9) {
+        top: 86%;
+        right: 60%;
+        border-color: #f37335;
+    }
+
+    &:nth-child(10) {
+        top: 46%;
+        right: 85%;
+        border-color: #b2ff59;
+        border-radius: 0;
+    }
+}
