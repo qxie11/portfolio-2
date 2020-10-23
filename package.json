@@ -9,7 +9,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/aos": "^3.0.3",
     "@types/rellax": "^1.7.3",
+    "aos": "^2.3.4",
     "next": "9.5.2",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.6.0",

@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+[data-aos="skills"] {
+    width: 0%;
+    transition-property: width;
+
+    &.aos-animate {
+        width: 100%;
+    }
+}

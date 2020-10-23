@@ -1,19 +1,4 @@
 @import "~normalize.css/normalize.css";
+@import "global.scss";
 @import "fonts.scss";
 @import "utils/vars.scss";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.logo {
-    width: 150px;
-    cursor: pointer;
-}
