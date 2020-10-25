@@ -42,11 +42,11 @@ const About: React.FC = () => {
         <div className="container">
           <Logo />
           <div className={styles.text_wrap}>
-            <h1 className={styles.chapter}
+            <h1 className="chapter"
               ref={chapter}>
               About
             </h1>
-            <span className={styles.chapter_addition}
+            <span className="chapter_addition"
               ref={chapter_addition}>
               LET'S GET ACQUAINTED CLOSER
             </span>

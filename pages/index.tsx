@@ -26,14 +26,14 @@ const Index: React.FC = () => {
       loop: true,
       showCursor: false
     };
-    // new Typed(`.${styles.describe}`, options);
+    new Typed(`.${styles.describe}`, options);
   }, [])
 
   return (
     <Nav>
       <section className={styles.main_page}>
         <video autoPlay muted loop className={styles.video}>
-          {/* <source src={require('../public/video/main-bg.mp4')} type="video/mp4" /> */}
+          <source src={require('../public/video/main-bg.mp4')} type="video/mp4" />
         </video>
         <div className="container">
           <Logo />

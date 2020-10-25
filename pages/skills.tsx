@@ -36,8 +36,8 @@ const Skills: React.FC = () => {
         <div className="container">
           <Logo />
           <div className={styles.text_wrap}>
-            <h1 ref={chapter} className={styles.chapter}>Skills</h1>
-            <span ref={chapter_addition} className={styles.chapter_addition}>KNOWLEDGE</span>
+            <h1 ref={chapter} className="chapter">Skills</h1>
+            <span ref={chapter_addition} className="chapter_addition">KNOWLEDGE</span>
           </div>
 
           <div className={styles.content}>

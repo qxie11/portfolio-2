@@ -39,6 +39,56 @@
             &_name {
                 color: #9b9b9b;
                 font-size: 22px;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    margin-left: 5px;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: text-bottom;
+                    background-size: cover !important;
+                }
+            }
+
+            &:nth-child(1) .skill_name:after {
+                background: url("../../public/images/skills/html.png");
+            }
+
+            &:nth-child(2) .skill_name:after {
+                background: url("../../public/images/skills/css.png");
+            }
+
+            &:nth-child(3) .skill_name:after {
+                background: url("../../public/images/skills/js.png");
+            }
+
+            &:nth-child(4) .skill_name:after {
+                background: url("../../public/images/skills/sass.png");
+            }
+
+            &:nth-child(5) .skill_name:after {
+                background: url("../../public/images/skills/jquery.png");
+            }
+
+            &:nth-child(6) .skill_name:after {
+                background: url("../../public/images/skills/react.png");
+            }
+
+            &:nth-child(7) .skill_name:after {
+                background: url("../../public/images/skills/redux.png");
+            }
+
+            &:nth-child(8) .skill_name:after {
+                background: url("../../public/images/skills/ts.png");
+            }
+
+            &:nth-child(9) .skill_name:after {
+                background: url("../../public/images/skills/next.png");
+            }
+
+            &:nth-child(10) .skill_name:after {
+                background: url("../../public/images/skills/node.png");
             }
 
             .line {
