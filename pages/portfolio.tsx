@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import Nav from './../components/Nav';
 import Logo from './../components/Logo';
 import styles from '../styles/components/portfolio.module.scss';
+import { portfolioItems } from '../constans/portfolio';
 
 const Portfolio: React.FC = () => {
 
@@ -36,6 +37,24 @@ const Portfolio: React.FC = () => {
               ref={chapter_addition}>
               SOME OF MY WORK
             </span>
+          </div>
+          <div className={styles.content}>
+            {
+              portfolioItems && portfolioItems.map(({name, desc, github, images, link }) => {
+              return <div className={styles.portfolio_item}>
+                  <div className={styles.wrapper}>
+                    <img className={styles.img1} src={images[0]} alt={name}/>
+                    <img className={styles.img2} src={images[1]} alt={name}/>
+                    <img className={styles.img3} src={images[2]} alt={name}/>
+                    <div className={styles.btn_wrap}>
+                      <h2 className={styles.name}>{name}</h2>
+                      {link && <a href={link} className={styles.view} target="_blank">view</a>}
+                     <a href={github} className={styles.code} target="_blank">code</a>
+                    </div>
+                  </div>
+                </div>
+              })
+            }
           </div>
         </div>
       </section>

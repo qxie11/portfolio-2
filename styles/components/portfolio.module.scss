@@ -1,11 +1,89 @@
+@import "../utils/vars.scss";
+
 .portfolio {
-    background: #000;
+    background: #000; 
+    color: white;
 
     .text_wrap {
         text-align: center;
-        color: white;
     }
     .chapter_addition:after {
         background: #fff;
+    }
+
+    .wrapper {
+       width: 90%;
+       padding-left: 10vw;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    &_item {
+        padding: 45px 25px;
+        position: relative;
+
+        &:first-child {
+            padding-top: 80px;
+        }
+        
+
+        .img1,
+        .img2,
+        .img3 {
+            position: relative;
+        }
+
+        .img1 {
+            width: 47vw;
+            max-width: 58%;
+            z-index: 1;
+        }
+
+        .img2 {
+            width: 28vw;
+            max-width: 35%;
+            margin-left: -5vw;
+            z-index: 2;
+        }
+
+        .img3 {
+            width: 14vw;
+            max-width: 18%;
+            margin-left: -4vw;
+            z-index: 3;
+        }
+
+        .btn_wrap {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .name {
+            display: inline-block;        
+            line-height: 0;
+            font-family: $raleway;
+        }
+
+        .view,
+        .code {
+            width: 60px;
+            height: 40px;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #1cfcdb; 
+            background: transparent;
+            color: #1cfcdb;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $raleway;
+            font-size: 15px;
+        }
+
+        .view {
+            // margin-left: 50%;
+        }
     }
 }
