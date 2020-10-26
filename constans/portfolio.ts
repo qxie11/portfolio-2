@@ -13,8 +13,9 @@ interface IPortfolioItem {
          public desc: string,
          public github: string,
          public images: string[],
+         public listOfTechnologies: string[],
          public link?: string,
-         public listOfTechnologies: string[]
+  
          ) {
       this.name = name;
       this.desc = desc;
@@ -34,9 +35,9 @@ interface IPortfolioItem {
       'https://i.postimg.cc/Y9Z39FVv/crypto-table1.jpg',
       'https://i.postimg.cc/44HP087V/crypto-table2.jpg',
       'https://i.postimg.cc/7hzNT68m/crypto-table3.jpg'
-     ],
-     "https://crypto-app-55ae59.netlify.app/",
-     ['React', 'Redux', 'Typescript', 'SASS']
+    ],
+    ['React', 'Redux', 'Typescript', 'SASS'],
+    "https://crypto-app-55ae59.netlify.app/",
      ),
      new PortfolioItem(
       "Covid monitorig",
@@ -47,8 +48,8 @@ interface IPortfolioItem {
        'https://i.postimg.cc/YqFHf4pc/covid2.jpg',
        'https://i.postimg.cc/fWps97Qj/covid3.jpg'
       ],
+      ['React', 'SASS', 'Chart JS', 'Material UI'],
       "https://qxie11.github.io/covid/",
-      ['React', 'SASS', 'Chart JS', 'Material UI']
       ),
       new PortfolioItem(
         "Crypto table",
@@ -59,8 +60,8 @@ interface IPortfolioItem {
          'https://i.postimg.cc/44HP087V/crypto-table2.jpg',
          'https://i.postimg.cc/7hzNT68m/crypto-table3.jpg'
         ],
+        ['React', 'Redux', 'Typescript', 'SASS'],
         "https://crypto-app-55ae59.netlify.app/",
-        ['React', 'Redux', 'Typescript', 'SASS']
         ),
         new PortfolioItem(
           "Crypto table",
@@ -71,7 +72,7 @@ interface IPortfolioItem {
            'https://i.postimg.cc/44HP087V/crypto-table2.jpg',
            'https://i.postimg.cc/7hzNT68m/crypto-table3.jpg'
           ],
+          ['React', 'Redux', 'Typescript', 'SASS'],
           "https://crypto-app-55ae59.netlify.app/",
-          ['React', 'Redux', 'Typescript', 'SASS']
           )
   ]
