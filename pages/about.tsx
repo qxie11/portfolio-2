@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
+import Head from 'next/head';
 import Rellax from 'rellax';
 import gsap from 'gsap';
 import Nav from './../components/Nav';
 import Logo from './../components/Logo';
 import styles from '../styles/components/about.module.scss';
+import links from './../constans/links';
 
 
 const About: React.FC = () => {
@@ -38,6 +40,9 @@ const About: React.FC = () => {
 
   return (
     <Nav>
+      <Head>
+        <title>About me</title>
+      </Head>
       <section className={styles.about}>
         <div className="container">
           <Logo />
@@ -79,6 +84,19 @@ const About: React.FC = () => {
               <p className={styles.info_item}><span>E-mail:</span><br />
                 <a href="malito:ponamarevevgeniy11@gmail.com">ponamarevevgeniy11@gmail.com</a>
               </p>
+              <div className={styles.links_wrap}>
+                {
+                  links.map(({ link, img }) => {
+                    return <a
+                      href={link}
+                      className={styles.link}
+                      target="_blank"
+                      key={link}>
+                      <img src={img} />
+                    </a>
+                  })
+                }
+              </div>
             </div>
           </div>
         </div>

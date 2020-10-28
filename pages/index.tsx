@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Typed from 'typed.js';
-import Link from 'next/link';
+import Head from 'next/head';
 import Nav from '../components/Nav';
 import styles from '../styles/components/main-page.module.scss';
 import Logo from './../components/Logo';
@@ -31,6 +31,9 @@ const Index: React.FC = () => {
 
   return (
     <Nav>
+      <Head>
+        <title>Ponomarev Evgeniy</title>
+      </Head>
       <section className={styles.main_page}>
         <video autoPlay muted loop className={styles.video}>
           <source src={require('../public/video/main-bg.mp4')} type="video/mp4" />

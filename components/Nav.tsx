@@ -29,7 +29,6 @@ const Nav: React.FC = ({ children }) => {
                     <Link href="/skills"><a>Skills</a></Link>
                     <Link href="/portfolio"><a>Portfolio</a></Link>
                     <Link href="/blog"><a>blog</a></Link>
-                    <Link href="/links"><a>Links</a></Link>
                 </nav>
             </div>
             <div className={styles.menubtn} onClick={() => setActive(!isActive)}>

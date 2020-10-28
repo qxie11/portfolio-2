@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import Head from 'next/head';
 import gsap from 'gsap';
 import AOS from 'aos';
 import Logo from '../components/Logo';
@@ -32,6 +33,9 @@ const Skills: React.FC = () => {
 
   return (
     <Nav>
+      <Head>
+        <title>Skills</title>
+      </Head>
       <section className={styles.skills}>
         <div className="container">
           <Logo />
@@ -51,7 +55,11 @@ const Skills: React.FC = () => {
                       className={styles.line_content}>
                     </div>
                   </div>
-                  <span style={{ marginLeft: `${percent - 4}%` }} className={styles.percent}>{percent}%</span>
+                  <span
+                    style={{ marginLeft: `${percent - 4}%` }}
+                    className={styles.percent}>
+                    {percent}%
+                  </span>
                 </div>
               })
             }
