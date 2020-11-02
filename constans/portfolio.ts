@@ -1,4 +1,4 @@
-interface IPortfolioItem {
+export interface IPortfolioItem {
   name: string,
   desc: string,
   github: string,

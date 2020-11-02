@@ -5,11 +5,11 @@ import Nav from './../components/Nav';
 import Logo from './../components/Logo';
 import styles from '../styles/components/portfolio.module.scss';
 import { portfolioItems } from '../constans/portfolio';
+import PortfolioItem from './../components/PortfolioItem';
 
 const Portfolio: React.FC = () => {
 
   useEffect(() => {
-
     gsap.from(chapter.current, {
       opacity: 0,
       y: -50,
@@ -44,33 +44,23 @@ const Portfolio: React.FC = () => {
           </div>
           <div className={styles.content}>
             {
-              portfolioItems && portfolioItems.map(({ name,
+              portfolioItems && portfolioItems.map(({
+                name,
                 desc,
                 github,
                 images,
                 link,
-                listOfTechnologies }) => {
-                return <div className={styles.portfolio_item} key={name}>
-                  <div className={styles.wrapper}>
-                    <img className={styles.img1} src={images[0]} alt={name} />
-                    <img className={styles.img2} src={images[1]} alt={name} />
-                    <img className={styles.img3} src={images[2]} alt={name} />
-                    <div className={styles.flex_wrap}>
-                      <h2 className={styles.name}>{name}</h2>
-                      <div className={styles.btn_wrap}>
-                        {link && <a href={link} className={styles.view} target="_blank">view</a>}
-                        <a href={github} className={styles.code} target="_blank">code</a>
-                      </div>
-                    </div>
-                    <p className={styles.desc}>{desc}</p>
-                    <div className={styles.technologies}>{
-                      listOfTechnologies && listOfTechnologies.map((tech) => {
-                        return <div className={styles.tech} key={tech}>{tech}</div>
-                      })
-                    }</div>
-                    <div className={styles.decor}></div>
-                  </div>
-                </div>
+                listOfTechnologies
+              }) => {
+                return <PortfolioItem
+                  name={name}
+                  desc={desc}
+                  github={github}
+                  images={images}
+                  link={link}
+                  listOfTechnologies={listOfTechnologies}
+                  key={name}
+                />
               })
             }
           </div>

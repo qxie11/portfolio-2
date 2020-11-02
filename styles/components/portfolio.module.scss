@@ -1,7 +1,7 @@
 @import "../utils/vars.scss";
 
 .portfolio {
-    background: #000; 
+    background: #000;
     color: white;
 
     .text_wrap {
@@ -12,10 +12,10 @@
     }
 
     .wrapper {
-       width: 90%;
-       padding-left: 10vw;
-       margin-left: auto;
-       margin-right: auto;
+        width: 90%;
+        padding-left: 10vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &_item {
@@ -25,7 +25,6 @@
         &:first-child {
             padding-top: 80px;
         }
-        
 
         .img1,
         .img2,
@@ -53,6 +52,34 @@
             z-index: 3;
         }
 
+        .loading_wrapper {
+            position: relative;
+
+            .loading1,
+            .loading2,
+            .loading3 {
+                display: inline-block;
+                background: url("../../public/images/portfolio/noise-effect.jpg");
+                background-size: 50%;
+                animation: noise 0.12s linear infinite;
+            }
+
+            .loading1 {
+                height: 23vw;
+                max-height: 400px;
+            }
+
+            .loading2 {
+                height: 18vw;
+                max-height: 300px;
+            }
+
+            .loading3 {
+                height: 12vw;
+                max-height: 200px;
+            }
+        }
+
         .flex_wrap {
             display: flex;
             align-items: center;
@@ -68,7 +95,7 @@
         }
 
         .name {
-            display: inline-block;        
+            display: inline-block;
             line-height: 1.5;
             font-family: $raleway;
         }
@@ -80,7 +107,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid ; 
+            border: 2px solid;
             background: transparent;
             color: #1cfcdb;
             text-decoration: none;
@@ -131,13 +158,21 @@
             margin-top: 60px;
             background: #1cfcdb;
         }
-
     }
 }
 
+@keyframes noise {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
 
 @media screen and (max-width: 415px) {
-   .portfolio {
+    .portfolio {
         .wrapper {
             width: 100%;
         }
@@ -153,6 +188,6 @@
 
         .btn_wrap {
             margin-top: 25px;
-        } 
-   }
+        }
+    }
 }
