@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import styles from "../styles/components/nav.module.scss";
@@ -12,12 +12,17 @@ const Nav: React.FC = ({ children }) => {
     }
 
     useEffect(() => {
-        isActive && gsap.from(`.${styles.nav} a`, {
-            opacity: 0,
-            y: -100,
-            duration: 1,
-            stagger: 0.1
-        });
+        if (isActive) {
+            gsap.fromTo(`.${styles.nav} a`, {
+                opacity: 0,
+                y: -100,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.1
+            })
+        }
     }, [isActive]);
 
     return (

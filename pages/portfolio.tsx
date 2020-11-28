@@ -8,6 +8,8 @@ import { portfolioItems } from '../constans/portfolio';
 import PortfolioItem from './../components/PortfolioItem';
 
 const Portfolio: React.FC = () => {
+  const chapter = useRef<HTMLHeadingElement | null>(null);
+  const chapter_addition = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
     gsap.from(chapter.current, {
@@ -22,8 +24,6 @@ const Portfolio: React.FC = () => {
     });
   }, [])
 
-  const chapter = useRef<HTMLHeadingElement | null>(null);
-  const chapter_addition = useRef<HTMLSpanElement | null>(null);
   return (
     <Nav>
       <Head>

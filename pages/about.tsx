@@ -16,7 +16,7 @@ const About: React.FC = () => {
   useEffect(() => {
     decorations.current.forEach(dec => {
       new Rellax(dec, {
-        speed: Math.random() * (15 - 1) + 1
+        speed: Math.random() * - 3
       });
     });
 

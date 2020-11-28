@@ -18,10 +18,11 @@ const PortfolioItem: React.FC<IPortfolioItem> = ({
   const [isImagesLoaded, setImagesLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(img.current && !img.current.complete)
     if (img && !img.current!.complete) {
       img.current!.addEventListener('load', () => {
-        setImagesLoaded(true);
+        setTimeout(() => {
+          setImagesLoaded(true);
+        }, 500)
       });
     } else { setImagesLoaded(true); }
   }, [])
@@ -40,18 +41,21 @@ const PortfolioItem: React.FC<IPortfolioItem> = ({
           src={images[0]}
           alt={name}
           style={{ height: !isImagesLoaded ? '0' : '' }}
+          loading="lazy"
         />
         <img
           className={styles.img2}
           src={images[1]}
           alt={name}
           style={{ height: !isImagesLoaded ? '0' : '' }}
+          loading="lazy"
         />
         <img
           className={styles.img3}
           src={images[2]}
           alt={name}
           style={{ height: !isImagesLoaded ? '0' : '' }}
+          loading="lazy"
         />
         <div className={styles.flex_wrap}>
           <h2 className={styles.name}>{name}</h2>
