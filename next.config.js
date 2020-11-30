@@ -10,6 +10,7 @@ module.exports = withPlugins([
         defaultPathMap,
         { dev, dir, outDir, distDir, buildId }
     ) {
+       defaultPathMap['404'] = defaultPathMap['/404']
         return {
             '/': { page: '/' },
             '/about': { page: '/about' },
