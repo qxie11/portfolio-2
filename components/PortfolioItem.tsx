@@ -11,6 +11,7 @@ const PortfolioItem: React.FC<IPortfolioItem> = ({
   listOfTechnologies
 }) => {
   const img = useRef<null | HTMLImageElement>(null);
+  const imagesTimer = useRef<null | ReturnType<typeof setTimeout>>(null);
   const loading1 = useRef<null | HTMLDivElement>(null);
   const loading2 = useRef<null | HTMLDivElement>(null);
   const loading3 = useRef<null | HTMLDivElement>(null);
@@ -19,13 +20,22 @@ const PortfolioItem: React.FC<IPortfolioItem> = ({
 
   useEffect(() => {
     if (img && !img.current!.complete) {
-      img.current!.addEventListener('load', () => {
-        setTimeout(() => {
-          setImagesLoaded(true);
-        }, 500)
-      });
-    } else { setImagesLoaded(true); }
-  }, [])
+      img.current!.addEventListener('load', imagesLoadingNoise);
+    } else {
+      setImagesLoaded(true);
+    }
+
+    return () => {
+      imagesTimer.current && clearTimeout(imagesTimer.current);
+      img.current!.removeEventListener('load', imagesLoadingNoise);
+    }
+  }, []);
+
+  const imagesLoadingNoise = () => {
+    imagesTimer.current = setTimeout(() => {
+      setImagesLoaded(true);
+    }, 200);
+  }
 
   return (
     <div className={styles.portfolio_item}>
